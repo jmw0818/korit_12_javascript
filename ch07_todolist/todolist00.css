@@ -1,0 +1,99 @@
+:root {
+  --primary-color: #6c5ce7;
+  --bg-color: #f9f9f9;
+  --text-color: #2d3436;
+  --danger-color: #ff7675;
+}
+
+body {
+  background-color: var(--bg-color);
+  font-family: 'Pretendard', sans-serif;
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+}
+
+/* Block */
+.todo-app {
+  width: 100%;
+  max-width: 400px;
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* Elements */
+.todo-app__title {
+  text-align: center;
+  color: var(--text-color);
+  margin-bottom: 1.5rem;
+}
+
+.todo-app__input-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 2rem;
+}
+
+.todo-app__input {
+  flex: 1;
+  padding: 10px;
+  border: 2px solid #eee;
+  border-radius: 6px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.todo-app__input:focus {
+  border-color: var(--primary-color);
+}
+
+.todo-app__add-btn {
+  padding: 10px 20px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Todo List Item */
+.todo-list {
+  list-style: none;
+  padding: 0;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+  transition: background 0.2s;
+}
+
+.todo-item__checkbox {
+  margin-right: 12px;
+  cursor: pointer;
+}
+
+.todo-item__text {
+  flex: 1;
+  color: var(--text-color);
+}
+
+/* Modifier: 완료 상태 */
+.todo-item--completed .todo-item__text {
+  text-decoration: line-through;
+  color: #b2bec3;
+}
+
+.todo-item__delete-btn {
+  background: none;
+  border: none;
+  color: var(--danger-color);
+  font-size: 1.5rem;
+  cursor: pointer;
+  line-height: 1;
+}
