@@ -49,11 +49,15 @@
     position: absolute;
 }
 
-body {
+html, body {
     width: 100%;
     height: 100%;
+}
+
+body {
     display: flex;
     flex-direction: column;
+    /* justify-content: center; */
     gap: 50px;
     align-items: center;
     font-family: 'GmarketSansMedium';
@@ -64,22 +68,26 @@ body {
 header {
     margin-top: 50px;
 }
-h1 {
+
+.title {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
-h1 .img_clock {
+.img_clock {
+    position: relative;
     width: 265px;
 }
-h1 .img_title {
+
+.title_img {
     position: absolute;
     width: 564px;
-    top: 120px;
 }
 
-div {
-    display: flex;
+.title_img .img_title {
+    width: 100%;
+    height: auto;
 }
 
 .intro_saying {
@@ -93,7 +101,8 @@ div {
 .intro {
     display: flex;
     justify-content: center;
-    margin-bottom: 102px;
+    align-items: center;
+    margin-bottom: 91px;
 }
 
 .quotes {
@@ -142,6 +151,7 @@ div {
 
 .input input::placeholder {
     color: #BABCBE;
+    text-align: center;
 }
 
 button {
@@ -165,9 +175,140 @@ button {
 
 .start .btn_wrap {
     position: relative;
+    
 }
 .start .click_img {
+    /* display: flex; */
     position: absolute;
-    right: -75px;
-    bottom: -25px;
+    right: -70px;
+    bottom: 0px;
 }
+
+.result_loading {
+    display: none;
+    /* display: flex; */
+    justify-content: center;
+    margin-bottom: 80px;
+}
+
+.result_loading .img_wrap {
+    width: 100px;
+    height: 100px;
+}
+
+.result_loading .img_wrap img {
+    width: 100%;
+    height: auto;
+    animation: rotate 1.1s infinite linear;
+}
+
+.result {
+    display: none;
+    /* display: flex; */
+    flex-direction: column;
+    align-items: center;
+    line-height: 1.5;
+    margin-bottom: 80px;
+}
+
+.result .result_wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.result .result_wrap div {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+}
+
+.result span {
+    padding: 0 20px;
+    font-family: 'GmarketSansBold';
+    font-size: 72px;
+}
+
+.result .button {
+    display: flex;
+    justify-self: center;
+    margin-top: 127px;
+}
+
+.result .go button {
+    color: #5B2386;
+}
+
+.button .share button {
+    background-color: #FFFFFF;
+    margin-left: 18px;
+    color: #5B2386;
+}
+
+#modal {
+    position: fixed;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+}
+
+#modal .modal_wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 700px;
+    height: 700px;
+    background-color: #FFFFFF;
+    border-radius: 20px;
+}
+
+#modal .cheer {
+    font-family: 'OTEnjoystoriesBA';
+    color: #5B2386;
+    text-align: center;
+}
+
+#modal .cheer h1 {
+    font-size: 80px;
+}
+
+#modal .cheer h3 {
+    font-size: 30px;
+}
+
+#modal .licat_img {
+    margin-bottom: 20px;
+}
+
+#modal .close_btn {
+    box-shadow: 0px 5px 20px 1px rgba(0, 0, 0, 15%);
+    color: #5B2386;
+    margin-bottom: 20px;
+}
+
+#modal .btn p {
+    color: #747474;
+    font-size: 13px;
+    text-align: center;
+}
+
+#copyright {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 50px;
+}
+
+#copyright p {
+    font-size: 12px;
+    line-height: 1.5;
+    padding: 20px 0;
+    text-align: center;
+}
+
