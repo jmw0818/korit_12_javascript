@@ -18,6 +18,7 @@ html, body {
   /* flex-direction: column; */
   background-color: #eff0ef;
   border: 2px solid black;
+  border-radius: 20px;
   width: 350px;
   height: 250px;
 }
@@ -49,11 +50,20 @@ span {
 .login_input input {
   flex: 1;
   height: 32px;
+  border: none;
 }
 
 button {
+  border: none;
+  border-radius: 15px;
+  background-color: rgba(0, 200, 223, 0.5);
+  /* box-shadow: 0px 2px 3px 0px; */
   margin-top: 5px;
   height: 82px;
   width: 90px;
   /* position: relative; */
+  cursor: pointer;
+}
+button:hover {
+  background-color: rgba(0, 200, 223, 0.8);
 }
